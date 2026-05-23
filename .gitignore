@@ -6,9 +6,7 @@ backend/venv/
 .venv/
 __pycache__/
 
-# Model Data (too large for standard Git)
-# If you want to use Git LFS for this, you can remove this section, but it's often better to host models elsewhere (like HuggingFace)
-Model Data/
+# Model Data is now tracked
 
 # Environment variables
 .env
