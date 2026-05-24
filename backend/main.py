@@ -1,9 +1,14 @@
+# pyrefly: ignore [missing-import]
 from fastapi import FastAPI, UploadFile, File, HTTPException
+# pyrefly: ignore [missing-import]
 from fastapi.middleware.cors import CORSMiddleware
+# pyrefly: ignore [missing-import]
 from pydantic import BaseModel
+# pyrefly: ignore [missing-import]
 import pandas as pd
 import io
 import os
+# pyrefly: ignore [missing-import]
 from ml_pipeline import SentimentPipeline
 
 app = FastAPI(title="CineSentiment API")
