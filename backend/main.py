@@ -81,10 +81,13 @@ async def batch_predict(file: UploadFile = File(...)):
     
     results = []
     for review, score in zip(reviews, scores):
+        sentiment = "Positive" if score >= 0.5 else "Negative"
+        confidence = score if sentiment == "Positive" else 1 - score
         results.append({
             "text": review,
-            "sentiment_score": float(score),
-            "sentiment_label": "Positive" if score >= 0.5 else "Negative"
+            "sentiment_score": float(confidence),
+            "confidence": float(confidence),
+            "sentiment_label": sentiment
         })
         
     return results

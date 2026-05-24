@@ -141,7 +141,7 @@ export default function BatchProcessor() {
                 <tr>
                   <th className="px-6 py-4 font-semibold">Review Snippet</th>
                   <th className="px-6 py-4 font-semibold w-32">Sentiment</th>
-                  <th className="px-6 py-4 font-semibold w-24 text-right">Score</th>
+                  <th className="px-6 py-4 font-semibold w-24 text-right">Confidence</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-700/50 bg-slate-900/50">
@@ -159,7 +159,7 @@ export default function BatchProcessor() {
                       </span>
                     </td>
                     <td className="px-6 py-4 text-right font-medium text-slate-400">
-                      {(row.sentiment_score * 100).toFixed(1)}%
+                      {(row.confidence * 100).toFixed(1)}%
                     </td>
                   </tr>
                 ))}
