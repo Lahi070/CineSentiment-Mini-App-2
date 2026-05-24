@@ -159,7 +159,7 @@ export default function BatchProcessor() {
                       </span>
                     </td>
                     <td className="px-6 py-4 text-right font-medium text-slate-400">
-                      {(row.confidence * 100).toFixed(1)}%
+                      {((row.confidence !== undefined ? row.confidence : (row.sentiment_label === 'Positive' ? row.sentiment_score : 1 - row.sentiment_score)) * 100).toFixed(1)}%
                     </td>
                   </tr>
                 ))}
